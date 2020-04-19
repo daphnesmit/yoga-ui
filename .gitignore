@@ -1,6 +1,7 @@
 dist/
 www/
 loader/
+jest-test-results.json
 
 *~
 *.sw[mnpcod]

@@ -16,12 +16,17 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
+    "build:watch": "stencil build --docs --watch",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll",
+    "test:generate": "stencil test --spec --json --outputFile=jest-test-results.json",
+    "test:generate:watch": "stencil test --spec --json --outputFile=jest-test-results.json --watch",
+    "test:watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook"
+    "story": "npm-run-all --parallel build:watch storybook",
+    "story:test": "npm run test:generate && npm run story",
+    "storybook:build": "build-storybook",
+    "storybook": "start-storybook -p 9001 -c .storybook -s www"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -32,16 +37,22 @@
     "@storybook/addon-backgrounds": "^5.3.18",
     "@storybook/addon-jest": "^5.3.18",
     "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
     "@storybook/addon-notes": "^5.3.18",
     "@storybook/addon-options": "^5.3.18",
+    "@storybook/addon-storysource": "^5.3.18",
     "@storybook/addon-viewport": "^5.3.18",
     "@storybook/html": "^5.3.18",
+    "@types/jest": "^24.9.1",
+    "@types/puppeteer": "^2.0.1",
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
     "case": "^1.6.3",
-    "copy-webpack-plugin": "^5.1.1",
-    "typescript": "^3.8.3",
-    "write-file-webpack-plugin": "^4.5.1"
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "npm-run-all": "^4.1.5",
+    "puppeteer": "^3.0.0",
+    "typescript": "^3.8.3"
   },
   "license": "MIT",
   "dependencies": {}
