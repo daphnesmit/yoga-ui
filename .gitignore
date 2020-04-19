@@ -2,6 +2,7 @@ dist/
 www/
 loader/
 jest-test-results.json
+storybook-static/
 
 *~
 *.sw[mnpcod]

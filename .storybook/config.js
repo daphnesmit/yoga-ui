@@ -5,11 +5,11 @@ import { withActions, configureActions } from "@storybook/addon-actions";
 import { withLinks } from "@storybook/addon-links";
 import { withTests } from "@storybook/addon-jest";
 import results from "../jest-test-results.json";
-// import buildStencilStories from "./stories-generator";
+import { defineCustomElements } from "../dist/esm/loader";
 
 addParameters({
   options: {
-    panelPosition: "right"
+    panelPosition: "right",
   },
 
   backgrounds: [
@@ -25,8 +25,8 @@ addParameters({
     { name: "slategrey", value: "#708090" },
     { name: "darkslategrey", value: "#2F4F4F" },
     { name: "dark", value: "#555555" },
-    { name: "black", value: "#000000" }
-  ]
+    { name: "black", value: "#000000" },
+  ],
 });
 
 addDecorator(withKnobs);
@@ -36,48 +36,15 @@ addDecorator(withActions("click"));
 addDecorator(
   withTests({
     results,
-    filesExt: ".spec.ts"
+    filesExt: ".spec.ts",
   })
 );
 
 configureActions({
   depth: 100,
   // Limit the number of items logged into the actions panel
-  limit: 20
+  limit: 20,
 });
 
-const loader = require("../loader/index.cjs.js");
-// const general_stories = require.context('../general-stories', true, /.\.stories\.js$/);
-const stories = require.context(
-  "../src",
-  true,
-  /\/[^/ ]+?\/.+\/.+\.stories\.tsx$/
-);
-
-// const auto_generated_stories = [
-//   {
-//     name: "ALL COMPONENTS|",
-//     components: require.context(
-//       "../dist/collection",
-//       true,
-//       /\/[^/ ]+?\/(?:[^/]+\/)*?([^/]+)\/\1\.js$/
-//     ),
-//     stories: require.context(
-//       "../dist/collection",
-//       true,
-//       /\/[^/ ]+?\/(?:[^/]+\/)*?([^/]+)\/\1[^/]*?\.stories\.js$/
-//     ),
-//     notes: require.context("../src", true, /\/[^/ ]+?\/.+\/.+\.md$/)
-//   }
-// ];
-
-const loadStories = () => {
-  loader.defineCustomElements(window);
-  // general_stories.keys().forEach(filename => general_stories(filename));
-  stories.keys().forEach(filename => stories(filename));
-  // auto_generated_stories.forEach(({ name, components, stories, notes }) => {
-  //   buildStencilStories(name, components, stories, notes);
-  // });
-};
+defineCustomElements();
 configure(require.context("../src/", true, /\.stories\.tsx$/), module);
-// configure(loadStories, module);
