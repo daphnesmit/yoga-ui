@@ -20,6 +20,12 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface YogaUiButton {
+        /**
+          * Button is disabled
+         */
+        "disabled": boolean;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +34,15 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLYogaUiButtonElement extends Components.YogaUiButton, HTMLStencilElement {
+    }
+    var HTMLYogaUiButtonElement: {
+        prototype: HTMLYogaUiButtonElement;
+        new (): HTMLYogaUiButtonElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "yoga-ui-button": HTMLYogaUiButtonElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +60,15 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface YogaUiButton {
+        /**
+          * Button is disabled
+         */
+        "disabled"?: boolean;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "yoga-ui-button": YogaUiButton;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +76,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "yoga-ui-button": LocalJSX.YogaUiButton & JSXBase.HTMLAttributes<HTMLYogaUiButtonElement>;
         }
     }
 }
