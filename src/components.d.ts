@@ -49,6 +49,8 @@ export namespace Components {
     }
     interface YogaUiRow {
     }
+    interface YogaUiSection {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -105,6 +107,12 @@ declare global {
         prototype: HTMLYogaUiRowElement;
         new (): HTMLYogaUiRowElement;
     };
+    interface HTMLYogaUiSectionElement extends Components.YogaUiSection, HTMLStencilElement {
+    }
+    var HTMLYogaUiSectionElement: {
+        prototype: HTMLYogaUiSectionElement;
+        new (): HTMLYogaUiSectionElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "yoga-ui-button": HTMLYogaUiButtonElement;
@@ -115,6 +123,7 @@ declare global {
         "yoga-ui-heading": HTMLYogaUiHeadingElement;
         "yoga-ui-icon": HTMLYogaUiIconElement;
         "yoga-ui-row": HTMLYogaUiRowElement;
+        "yoga-ui-section": HTMLYogaUiSectionElement;
     }
 }
 declare namespace LocalJSX {
@@ -161,6 +170,8 @@ declare namespace LocalJSX {
     }
     interface YogaUiRow {
     }
+    interface YogaUiSection {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "yoga-ui-button": YogaUiButton;
@@ -171,6 +182,7 @@ declare namespace LocalJSX {
         "yoga-ui-heading": YogaUiHeading;
         "yoga-ui-icon": YogaUiIcon;
         "yoga-ui-row": YogaUiRow;
+        "yoga-ui-section": YogaUiSection;
     }
 }
 export { LocalJSX as JSX };
@@ -186,6 +198,7 @@ declare module "@stencil/core" {
             "yoga-ui-heading": LocalJSX.YogaUiHeading & JSXBase.HTMLAttributes<HTMLYogaUiHeadingElement>;
             "yoga-ui-icon": LocalJSX.YogaUiIcon & JSXBase.HTMLAttributes<HTMLYogaUiIconElement>;
             "yoga-ui-row": LocalJSX.YogaUiRow & JSXBase.HTMLAttributes<HTMLYogaUiRowElement>;
+            "yoga-ui-section": LocalJSX.YogaUiSection & JSXBase.HTMLAttributes<HTMLYogaUiSectionElement>;
         }
     }
 }

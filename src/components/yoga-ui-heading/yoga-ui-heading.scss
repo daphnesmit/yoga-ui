@@ -16,6 +16,8 @@ h1,
 .h1 {
   font-size: 6rem;
   line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -2px;
 }
 
 h2,
@@ -38,4 +40,8 @@ h4,
 
 .heading--medium {
   font-weight: 500;
+}
+
+.heading--bold {
+  font-weight: 700;
 }
