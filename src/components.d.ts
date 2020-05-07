@@ -25,6 +25,20 @@ export namespace Components {
           * Button is disabled
          */
         "disabled": boolean;
+        /**
+          * Button label
+         */
+        "variant": string;
+    }
+    interface YogaUiCol {
+        /**
+          * Column size
+         */
+        "cols": string | number;
+    }
+    interface YogaUiContainer {
+    }
+    interface YogaUiRow {
     }
 }
 declare global {
@@ -40,9 +54,30 @@ declare global {
         prototype: HTMLYogaUiButtonElement;
         new (): HTMLYogaUiButtonElement;
     };
+    interface HTMLYogaUiColElement extends Components.YogaUiCol, HTMLStencilElement {
+    }
+    var HTMLYogaUiColElement: {
+        prototype: HTMLYogaUiColElement;
+        new (): HTMLYogaUiColElement;
+    };
+    interface HTMLYogaUiContainerElement extends Components.YogaUiContainer, HTMLStencilElement {
+    }
+    var HTMLYogaUiContainerElement: {
+        prototype: HTMLYogaUiContainerElement;
+        new (): HTMLYogaUiContainerElement;
+    };
+    interface HTMLYogaUiRowElement extends Components.YogaUiRow, HTMLStencilElement {
+    }
+    var HTMLYogaUiRowElement: {
+        prototype: HTMLYogaUiRowElement;
+        new (): HTMLYogaUiRowElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "yoga-ui-button": HTMLYogaUiButtonElement;
+        "yoga-ui-col": HTMLYogaUiColElement;
+        "yoga-ui-container": HTMLYogaUiContainerElement;
+        "yoga-ui-row": HTMLYogaUiRowElement;
     }
 }
 declare namespace LocalJSX {
@@ -65,10 +100,27 @@ declare namespace LocalJSX {
           * Button is disabled
          */
         "disabled"?: boolean;
+        /**
+          * Button label
+         */
+        "variant"?: string;
+    }
+    interface YogaUiCol {
+        /**
+          * Column size
+         */
+        "cols"?: string | number;
+    }
+    interface YogaUiContainer {
+    }
+    interface YogaUiRow {
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "yoga-ui-button": YogaUiButton;
+        "yoga-ui-col": YogaUiCol;
+        "yoga-ui-container": YogaUiContainer;
+        "yoga-ui-row": YogaUiRow;
     }
 }
 export { LocalJSX as JSX };
@@ -77,6 +129,9 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "yoga-ui-button": LocalJSX.YogaUiButton & JSXBase.HTMLAttributes<HTMLYogaUiButtonElement>;
+            "yoga-ui-col": LocalJSX.YogaUiCol & JSXBase.HTMLAttributes<HTMLYogaUiColElement>;
+            "yoga-ui-container": LocalJSX.YogaUiContainer & JSXBase.HTMLAttributes<HTMLYogaUiContainerElement>;
+            "yoga-ui-row": LocalJSX.YogaUiRow & JSXBase.HTMLAttributes<HTMLYogaUiRowElement>;
         }
     }
 }

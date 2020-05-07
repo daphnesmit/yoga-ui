@@ -7,12 +7,21 @@
 
   <script type="module" src="/build/yoga-ui.esm.js"></script>
   <script nomodule src="/build/yoga-ui.js"></script>
-
+  <link rel="stylesheet" href="/build/yoga-ui.css">
 </head>
 <body>
 
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-  <yoga-ui-button>I am a Button</yoga-ui-button>
+  <yoga-ui-container>
+    <yoga-ui-row>
+      <yoga-ui-col cols="[12,6,4]">
+        Sidebar
+      </yoga-ui-col>
+      <yoga-ui-col cols="[12,6,8]">
+        <yoga-ui-button>I am a Button</yoga-ui-button>
+      </yoga-ui-col>
+    </yoga-ui-row>
+  </yoga-ui-container>
+
 
 </body>
 </html>

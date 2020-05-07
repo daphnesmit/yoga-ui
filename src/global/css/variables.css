@@ -1,0 +1,19 @@
+:root {
+  --color-primary: #7b4fff;
+  --color-primary-light: #8e69fd;
+  --color-primary-dark: #5c34d7;
+  --color-secondary: #cbc6d7;
+  --color-secondary-light: #efeff3;
+  --color-white: #ffffff;
+  --color-dark-grey: #8b8795;
+  --font-primary: "SFProDisplay", Arial, sans-serif;
+
+  --grid-padding: 15px;
+  --grid-container-width: 1280px;
+  --grid-container-padding: 20px;
+
+  --breakpoint-sm: 40em;
+  --breakpoint-md: 52em;
+  --breakpoint-lg: 64em;
+  --breakpoint-xl: 80em;
+}

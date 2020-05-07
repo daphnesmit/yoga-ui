@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop } from "@stencil/core";
+import { Component, h, Prop } from "@stencil/core";
 
 @Component({
   tag: "yoga-ui-button",
@@ -9,7 +9,7 @@ export class YogaUiButton {
   /**
    * Button label
    */
-  // @Prop() label: string;
+  @Prop() variant = "primary";
   /**
    * Button is disabled
    */
@@ -17,14 +17,17 @@ export class YogaUiButton {
 
   render() {
     return (
-      <Host
+      <button
         disabled={this.disabled}
         class={{
+          [`button button--${this.variant}`]: true,
           "is--disabled": this.disabled
         }}
       >
-        <span><slot/></span>
-      </Host>
+        <span>
+          <slot></slot>
+        </span>
+      </button>
     );
   }
 }

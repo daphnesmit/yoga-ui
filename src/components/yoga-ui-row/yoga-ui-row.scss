@@ -1,0 +1,5 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: var(--grid-padding);
+}

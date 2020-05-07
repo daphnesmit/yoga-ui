@@ -1,0 +1,19 @@
+:host {
+  grid-column: span 12;
+}
+
+@for $i from 1 through 12 {
+  :host(.col-#{$i}) {
+    grid-column: span $i;
+  }
+}
+
+@each $name, $value in $breakpoints {
+  @include breakpoint($name) {
+    @for $i from 1 through 12 {
+      :host(.col-#{$name}-#{$i}) {
+        grid-column: span $i;
+      }
+    }
+  }
+}
