@@ -1,13 +1,13 @@
 .button {
   display: inline-block;
   text-align: center;
-  line-height: 1.3;
+  line-height: 1.5;
   user-select: none;
   position: relative;
   cursor: pointer;
   border: 0;
   border-radius: 4px;
-  padding: 14px 24px;
+  padding: var(--space-12) var(--space-24);
   font-size: 1rem;
   outline: none;
   transition: background-color 200ms ease-out;
@@ -16,6 +16,10 @@
     color: var(--color-grey-medium);
     background-color: var(--color-secondary-light);
     cursor: not-allowed;
+
+    .button__icon {
+      color: var(--color-grey-medium);
+    }
   }
 }
 
@@ -38,6 +42,10 @@
   transition: background-color 200ms ease-out, box-shadow 200ms ease-out;
   box-shadow: inset 0 0 0 1px var(--color-secondary-light);
 
+  .button__icon {
+    color: var(--color-primary);
+  }
+
   &:not(:disabled):hover {
     background-color: transparent;
     color: var(--color-primary);
@@ -47,5 +55,23 @@
   &:not(:disabled):hover:active {
     background-color: var(--color-primary);
     color: var(--color-white);
+
+    .button__icon {
+      color: var(--color-white);
+    }
   }
+}
+
+.button__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button__icon--start {
+  margin-right: 14px;
+}
+
+.button__icon--end {
+  margin-left: 14px;
 }

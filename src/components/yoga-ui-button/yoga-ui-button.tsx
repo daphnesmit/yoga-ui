@@ -6,14 +6,19 @@ import { Component, h, Prop } from "@stencil/core";
   shadow: true
 })
 export class YogaUiButton {
-  /**
-   * Button label
-   */
   @Prop() variant = "primary";
-  /**
-   * Button is disabled
-   */
   @Prop() disabled: boolean;
+  @Prop() startIcon: string;
+  @Prop() endIcon: string;
+  @Prop() iconSize: string;
+
+  getIconColor() {
+    return this.disabled ? "grey-medium" : "primary";
+  }
+
+  getIconSize() {
+    return this.iconSize || "8px";
+  }
 
   render() {
     return (
@@ -24,9 +29,29 @@ export class YogaUiButton {
           "is--disabled": this.disabled
         }}
       >
-        <span>
-          <slot></slot>
-        </span>
+        <div class="button__wrapper">
+          {this.startIcon && (
+            <div class="button__icon button__icon--start">
+              <yoga-ui-icon
+                icon={this.startIcon}
+                width={this.getIconSize()}
+                height={this.getIconSize()}
+              />
+            </div>
+          )}
+          <span>
+            <slot></slot>
+          </span>
+          {this.endIcon && (
+            <div class="button__icon button__icon--start">
+              <yoga-ui-icon
+                icon={this.endIcon}
+                width={this.getIconSize()}
+                height={this.getIconSize()}
+              />
+            </div>
+          )}
+        </div>
       </button>
     );
   }

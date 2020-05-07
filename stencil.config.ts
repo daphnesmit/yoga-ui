@@ -1,5 +1,6 @@
 import { Config } from "@stencil/core";
 import { sass } from "@stencil/sass";
+import { inlineSvg } from "stencil-inline-svg";
 
 export const config: Config = {
   namespace: "yoga-ui",
@@ -11,12 +12,13 @@ export const config: Config = {
         "src/global/scss/variables.scss",
         "src/global/scss/mixins.scss"
       ]
-    })
+    }),
+    inlineSvg()
   ],
   outputTargets: [
     {
       type: "dist",
-      esmLoaderPath: "../loader",
+      esmLoaderPath: "../loader"
       // copy: [{ src: "assets/fonts", dest: "static/fonts" }]
     },
     {
@@ -25,7 +27,7 @@ export const config: Config = {
     {
       type: "www",
       serviceWorker: null, // disable service workers
-      dir: "public",
+      dir: "public"
       // copy: [{ src: "assets/fonts", dest: "static/fonts" }]
     }
   ]

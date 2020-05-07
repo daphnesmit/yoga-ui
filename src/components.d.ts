@@ -21,22 +21,31 @@ export namespace Components {
         "middle": string;
     }
     interface YogaUiButton {
-        /**
-          * Button is disabled
-         */
         "disabled": boolean;
-        /**
-          * Button label
-         */
+        "endIcon": string;
+        "iconSize": string;
+        "startIcon": string;
         "variant": string;
     }
+    interface YogaUiCard {
+    }
     interface YogaUiCol {
-        /**
-          * Column size
-         */
         "cols": string | number;
     }
     interface YogaUiContainer {
+    }
+    interface YogaUiCta {
+    }
+    interface YogaUiHeading {
+        "as": Heading;
+        "styleAs": Heading;
+        "variant": string;
+    }
+    interface YogaUiIcon {
+        "color": string;
+        "height": string;
+        "icon": string;
+        "width": string;
     }
     interface YogaUiRow {
     }
@@ -54,6 +63,12 @@ declare global {
         prototype: HTMLYogaUiButtonElement;
         new (): HTMLYogaUiButtonElement;
     };
+    interface HTMLYogaUiCardElement extends Components.YogaUiCard, HTMLStencilElement {
+    }
+    var HTMLYogaUiCardElement: {
+        prototype: HTMLYogaUiCardElement;
+        new (): HTMLYogaUiCardElement;
+    };
     interface HTMLYogaUiColElement extends Components.YogaUiCol, HTMLStencilElement {
     }
     var HTMLYogaUiColElement: {
@@ -66,6 +81,24 @@ declare global {
         prototype: HTMLYogaUiContainerElement;
         new (): HTMLYogaUiContainerElement;
     };
+    interface HTMLYogaUiCtaElement extends Components.YogaUiCta, HTMLStencilElement {
+    }
+    var HTMLYogaUiCtaElement: {
+        prototype: HTMLYogaUiCtaElement;
+        new (): HTMLYogaUiCtaElement;
+    };
+    interface HTMLYogaUiHeadingElement extends Components.YogaUiHeading, HTMLStencilElement {
+    }
+    var HTMLYogaUiHeadingElement: {
+        prototype: HTMLYogaUiHeadingElement;
+        new (): HTMLYogaUiHeadingElement;
+    };
+    interface HTMLYogaUiIconElement extends Components.YogaUiIcon, HTMLStencilElement {
+    }
+    var HTMLYogaUiIconElement: {
+        prototype: HTMLYogaUiIconElement;
+        new (): HTMLYogaUiIconElement;
+    };
     interface HTMLYogaUiRowElement extends Components.YogaUiRow, HTMLStencilElement {
     }
     var HTMLYogaUiRowElement: {
@@ -75,8 +108,12 @@ declare global {
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "yoga-ui-button": HTMLYogaUiButtonElement;
+        "yoga-ui-card": HTMLYogaUiCardElement;
         "yoga-ui-col": HTMLYogaUiColElement;
         "yoga-ui-container": HTMLYogaUiContainerElement;
+        "yoga-ui-cta": HTMLYogaUiCtaElement;
+        "yoga-ui-heading": HTMLYogaUiHeadingElement;
+        "yoga-ui-icon": HTMLYogaUiIconElement;
         "yoga-ui-row": HTMLYogaUiRowElement;
     }
 }
@@ -96,30 +133,43 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface YogaUiButton {
-        /**
-          * Button is disabled
-         */
         "disabled"?: boolean;
-        /**
-          * Button label
-         */
+        "endIcon"?: string;
+        "iconSize"?: string;
+        "startIcon"?: string;
         "variant"?: string;
     }
+    interface YogaUiCard {
+    }
     interface YogaUiCol {
-        /**
-          * Column size
-         */
         "cols"?: string | number;
     }
     interface YogaUiContainer {
+    }
+    interface YogaUiCta {
+    }
+    interface YogaUiHeading {
+        "as": Heading;
+        "styleAs"?: Heading;
+        "variant"?: string;
+    }
+    interface YogaUiIcon {
+        "color"?: string;
+        "height"?: string;
+        "icon": string;
+        "width"?: string;
     }
     interface YogaUiRow {
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "yoga-ui-button": YogaUiButton;
+        "yoga-ui-card": YogaUiCard;
         "yoga-ui-col": YogaUiCol;
         "yoga-ui-container": YogaUiContainer;
+        "yoga-ui-cta": YogaUiCta;
+        "yoga-ui-heading": YogaUiHeading;
+        "yoga-ui-icon": YogaUiIcon;
         "yoga-ui-row": YogaUiRow;
     }
 }
@@ -129,8 +179,12 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "yoga-ui-button": LocalJSX.YogaUiButton & JSXBase.HTMLAttributes<HTMLYogaUiButtonElement>;
+            "yoga-ui-card": LocalJSX.YogaUiCard & JSXBase.HTMLAttributes<HTMLYogaUiCardElement>;
             "yoga-ui-col": LocalJSX.YogaUiCol & JSXBase.HTMLAttributes<HTMLYogaUiColElement>;
             "yoga-ui-container": LocalJSX.YogaUiContainer & JSXBase.HTMLAttributes<HTMLYogaUiContainerElement>;
+            "yoga-ui-cta": LocalJSX.YogaUiCta & JSXBase.HTMLAttributes<HTMLYogaUiCtaElement>;
+            "yoga-ui-heading": LocalJSX.YogaUiHeading & JSXBase.HTMLAttributes<HTMLYogaUiHeadingElement>;
+            "yoga-ui-icon": LocalJSX.YogaUiIcon & JSXBase.HTMLAttributes<HTMLYogaUiIconElement>;
             "yoga-ui-row": LocalJSX.YogaUiRow & JSXBase.HTMLAttributes<HTMLYogaUiRowElement>;
         }
     }

@@ -8,9 +8,6 @@ import { grid } from "../../utils/grid";
   shadow: true
 })
 export class YogaUiCol {
-  /**
-   * Column size
-   */
   @Prop() cols: string | number;
 
   componentWillLoad() {
@@ -24,6 +21,7 @@ export class YogaUiCol {
     }
     return col && `col-${grid.breakpoints[i - 1]}-${col}`;
   }
+  
   getColumnClasses() {
     return this.cols && Array.isArray(this.cols)
       ? this.cols.map(this.getColumnClassesByBreakpoint).join(" ")

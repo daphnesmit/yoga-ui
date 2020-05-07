@@ -9,7 +9,7 @@
 
 | Property | Attribute | Description | Type               | Default     |
 | -------- | --------- | ----------- | ------------------ | ----------- |
-| `cols`   | `cols`    | Column size | `number \| string` | `undefined` |
+| `cols`   | `cols`    |             | `number \| string` | `undefined` |
 
 
 ----------------------------------------------

@@ -14,6 +14,10 @@ Yoga UI is a UI component library that contains the following Web Components:
 |           | yoga-ui-col         |
 | Button    | yoga-ui-button      | 
 
+### WIP
+This is very much a Work In Progress. Still need to make a whole lot including:
+- make storybook components
+- make tests
 
 ## 🏁 How to use
 
@@ -28,7 +32,7 @@ Yoga UI is a UI component library that contains the following Web Components:
 
 ### In a stencil-starter app
 - Run `npm install yoga-ui --save`
-- Add an import to the npm packages `import yoga-ui;`
+- Add an import to the npm package `import yoga-ui;`
 - Then you can use the element anywhere in your template, JSX, html etc
 
 
