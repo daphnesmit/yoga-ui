@@ -17,7 +17,7 @@ export const config: Config = {
     {
       type: "dist",
       esmLoaderPath: "../loader",
-      copy: [{ src: "assets/fonts", dest: "static/fonts" }]
+      // copy: [{ src: "assets/fonts", dest: "static/fonts" }]
     },
     {
       type: "docs-readme"
@@ -26,7 +26,7 @@ export const config: Config = {
       type: "www",
       serviceWorker: null, // disable service workers
       dir: "public",
-      copy: [{ src: "assets/fonts", dest: "static/fonts" }]
+      // copy: [{ src: "assets/fonts", dest: "static/fonts" }]
     }
   ]
 };

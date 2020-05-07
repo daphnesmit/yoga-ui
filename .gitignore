@@ -1,5 +1,6 @@
 dist/
 www/
+public/
 loader/
 jest-test-results.json
 storybook-static/

@@ -1,22 +1,22 @@
 /* @font-face {
     font-family: 'SFProDisplay';
-    src: url('/static/fonts/SFProDisplay-BoldItalic.woff2') format('woff2'),
-        url('/static/fonts/SFProDisplay-BoldItalic.woff') format('woff');
+    src: url('/assets/fonts/SFProDisplay-BoldItalic.woff2') format('woff2'),
+        url('/assets/fonts/SFProDisplay-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'SFProDisplay';
-    src: url('/static/fonts/SFProDisplay-MediumItalic.woff2') format('woff2'),
-        url('/static/fonts/SFProDisplay-MediumItalic.woff') format('woff');
+    src: url('/assets/fonts/SFProDisplay-MediumItalic.woff2') format('woff2'),
+        url('/assets/fonts/SFProDisplay-MediumItalic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
 } */
 @font-face {
     font-family: 'SFProDisplay';
-    src: url('/static/fonts/SFProDisplay-Light.woff2') format('woff2'),
-        url('/static/fonts/SFProDisplay-Light.woff') format('woff');
+    src: url('/assets/fonts/SFProDisplay-Light.woff2') format('woff2'),
+        url('/assets/fonts/SFProDisplay-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
@@ -33,32 +33,32 @@
 
 @font-face {
     font-family: 'SFProDisplay';
-    src: url('/static/fonts/SFProDisplay-Medium.woff2') format('woff2'),
-        url('/static/fonts/SFProDisplay-Medium.woff') format('woff');
+    src: url('/assets/fonts/SFProDisplay-Medium.woff2') format('woff2'),
+        url('/assets/fonts/SFProDisplay-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SFProDisplay';
-    src: url('/static/fonts/SFProDisplay-Regular.woff2') format('woff2'),
-        url('/static/fonts/SFProDisplay-Regular.woff') format('woff');
+    src: url('/assets/fonts/SFProDisplay-Regular.woff2') format('woff2'),
+        url('/assets/fonts/SFProDisplay-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 /* @font-face {
     font-family: 'SFProDisplay';
-    src: url('/static/fonts/SFProDisplay-RegularItalic.woff2') format('woff2'),
-        url('/static/fonts/SFProDisplay-RegularItalic.woff') format('woff');
+    src: url('/assets/fonts/SFProDisplay-RegularItalic.woff2') format('woff2'),
+        url('/assets/fonts/SFProDisplay-RegularItalic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 } */
 
 /* @font-face {
     font-family: 'SFProDisplay';
-    src: url('/static/fonts/SFProDisplay-Bold.woff2') format('woff2'),
-        url('/static/fonts/SFProDisplay-Bold.woff') format('woff');
+    src: url('/assets/fonts/SFProDisplay-Bold.woff2') format('woff2'),
+        url('/assets/fonts/SFProDisplay-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
