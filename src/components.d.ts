@@ -29,6 +29,8 @@ export namespace Components {
     }
     interface YogaUiCard {
     }
+    interface YogaUiChartCard {
+    }
     interface YogaUiCol {
         "cols": string | number;
     }
@@ -70,6 +72,12 @@ declare global {
     var HTMLYogaUiCardElement: {
         prototype: HTMLYogaUiCardElement;
         new (): HTMLYogaUiCardElement;
+    };
+    interface HTMLYogaUiChartCardElement extends Components.YogaUiChartCard, HTMLStencilElement {
+    }
+    var HTMLYogaUiChartCardElement: {
+        prototype: HTMLYogaUiChartCardElement;
+        new (): HTMLYogaUiChartCardElement;
     };
     interface HTMLYogaUiColElement extends Components.YogaUiCol, HTMLStencilElement {
     }
@@ -117,6 +125,7 @@ declare global {
         "my-component": HTMLMyComponentElement;
         "yoga-ui-button": HTMLYogaUiButtonElement;
         "yoga-ui-card": HTMLYogaUiCardElement;
+        "yoga-ui-chart-card": HTMLYogaUiChartCardElement;
         "yoga-ui-col": HTMLYogaUiColElement;
         "yoga-ui-container": HTMLYogaUiContainerElement;
         "yoga-ui-cta": HTMLYogaUiCtaElement;
@@ -150,12 +159,15 @@ declare namespace LocalJSX {
     }
     interface YogaUiCard {
     }
+    interface YogaUiChartCard {
+    }
     interface YogaUiCol {
         "cols"?: string | number;
     }
     interface YogaUiContainer {
     }
     interface YogaUiCta {
+        "onCtaButtonClick"?: (event: CustomEvent<any>) => void;
     }
     interface YogaUiHeading {
         "as": Heading;
@@ -176,6 +188,7 @@ declare namespace LocalJSX {
         "my-component": MyComponent;
         "yoga-ui-button": YogaUiButton;
         "yoga-ui-card": YogaUiCard;
+        "yoga-ui-chart-card": YogaUiChartCard;
         "yoga-ui-col": YogaUiCol;
         "yoga-ui-container": YogaUiContainer;
         "yoga-ui-cta": YogaUiCta;
@@ -192,6 +205,7 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "yoga-ui-button": LocalJSX.YogaUiButton & JSXBase.HTMLAttributes<HTMLYogaUiButtonElement>;
             "yoga-ui-card": LocalJSX.YogaUiCard & JSXBase.HTMLAttributes<HTMLYogaUiCardElement>;
+            "yoga-ui-chart-card": LocalJSX.YogaUiChartCard & JSXBase.HTMLAttributes<HTMLYogaUiChartCardElement>;
             "yoga-ui-col": LocalJSX.YogaUiCol & JSXBase.HTMLAttributes<HTMLYogaUiColElement>;
             "yoga-ui-container": LocalJSX.YogaUiContainer & JSXBase.HTMLAttributes<HTMLYogaUiContainerElement>;
             "yoga-ui-cta": LocalJSX.YogaUiCta & JSXBase.HTMLAttributes<HTMLYogaUiCtaElement>;

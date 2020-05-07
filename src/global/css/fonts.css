@@ -19,6 +19,7 @@
     url("/assets/fonts/SFProDisplay-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
+  font-display: fallback;
 }
 
 /* @font-face {
@@ -36,6 +37,7 @@
     url("/assets/fonts/SFProDisplay-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
@@ -44,6 +46,7 @@
     url("/assets/fonts/SFProDisplay-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: fallback;
 }
 
 /* @font-face {
@@ -60,4 +63,5 @@
     url("/assets/fonts/SFProDisplay-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
+  font-display: fallback;
 }
