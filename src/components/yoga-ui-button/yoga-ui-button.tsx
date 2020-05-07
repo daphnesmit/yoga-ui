@@ -2,7 +2,7 @@ import { Component, h, Prop } from "@stencil/core";
 
 @Component({
   tag: "yoga-ui-button",
-  styleUrl: "yoga-ui-button.css",
+  styleUrl: "yoga-ui-button.scss",
   shadow: true
 })
 export class YogaUiButton {

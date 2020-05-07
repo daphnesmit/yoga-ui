@@ -5,7 +5,9 @@
   --color-secondary: #cbc6d7;
   --color-secondary-light: #efeff3;
   --color-white: #ffffff;
-  --color-dark-grey: #8b8795;
+  --color-off-white: #f6f6f8;
+  --color-grey-dark: #8b8795;
+  --color-grey-medium: #cccad2;
   --font-primary: "SFProDisplay", Arial, sans-serif;
 
   --grid-padding: 15px;

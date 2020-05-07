@@ -362,6 +362,23 @@
     font-weight: 500;
     font-style: italic;
 } */
+@font-face {
+    font-family: 'SFProDisplay';
+    src: url('/static/fonts/SFProDisplay-Light.woff2') format('woff2'),
+        url('/static/fonts/SFProDisplay-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* @font-face {
+    font-family: 'SFProDisplay';
+    src: url('SFProDisplay-LightItalic.woff2') format('woff2'),
+        url('SFProDisplay-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+ */
+
 
 @font-face {
     font-family: 'SFProDisplay';
@@ -403,7 +420,9 @@
   --color-secondary: #cbc6d7;
   --color-secondary-light: #efeff3;
   --color-white: #ffffff;
-  --color-dark-grey: #8b8795;
+  --color-off-white: #f6f6f8;
+  --color-grey-dark: #8b8795;
+  --color-grey-medium: #cccad2;
   --font-primary: "SFProDisplay", Arial, sans-serif;
 
   --grid-padding: 15px;
@@ -422,8 +441,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.8;
   min-width: 320px;
+  background-color: var(--color-off-white);
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
 a {
   color: inherit;
   text-decoration: none;
