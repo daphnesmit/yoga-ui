@@ -1,0 +1,18 @@
+.progress {
+  width: 100%;
+  background-color: var(--color-off-white);
+  border-radius: 4px;
+}
+.progress__fill {
+  display: block;
+  height: 9px;
+  background-color: var(--color-primary);
+  border-radius: 4px 0 0 4px;
+  animation: animateProgressbar 1000ms ease-in-out forwards;
+}
+
+@keyframes animateProgressbar {
+  0% {
+    width: 0;
+  }
+}

@@ -11,7 +11,7 @@ export class YogaUiCta {
   handleButtonClick() {
     this.ctaButtonClick.emit();
   }
-  
+
   render() {
     return (
       <yoga-ui-card>
@@ -21,7 +21,7 @@ export class YogaUiCta {
             width="170px"
             height="auto"
           />
-          <yoga-ui-heading class="cta__heading" as="h3" styleAs="h2">
+          <yoga-ui-heading class="cta__heading" as="h3" style-as="h2">
             Make progress
           </yoga-ui-heading>
           <span class="cta__text">with training plan</span>

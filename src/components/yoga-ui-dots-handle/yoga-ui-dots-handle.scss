@@ -1,0 +1,48 @@
+$size: 4px;
+
+.dot {
+  position: relative;
+  width: $size;
+  height: $size * 4;
+
+  &:hover {
+    .dot__item,
+    .dot__item:before,
+    .dot__item:after {
+      background-color: var(--color-primary);
+    }
+  }
+}
+
+.dot__item,
+.dot__item:before,
+.dot__item:after {
+  position: absolute;
+  width: $size;
+  height: $size;
+  border-radius: $size;
+  background-color: var(--color-secondary);
+  transition: background-color 200ms ease-out;
+}
+
+.dot__item {
+  top: 50%;
+  left: 50%;
+  margin-top: -#{$size/2};
+  margin-left: -#{$size/2};
+}
+
+.dot__item:before,
+.dot__item:after {
+  content: "";
+}
+
+.dot__item:before {
+  top: #{$size + 2px};
+  margin-left: -#{$size/2};
+}
+
+.dot__item:after {
+  bottom: #{$size + 2px};
+  margin-left: -#{$size/2};
+}

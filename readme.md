@@ -13,6 +13,11 @@ Yoga UI is a UI component library that contains the following Web Components:
 |           | yoga-ui-row         |
 |           | yoga-ui-col         |
 | Button    | yoga-ui-button      | 
+| Heading   | yoga-ui-heading     | 
+| Icon      | yoga-ui-icon        | 
+| Card      | yoga-ui-card        | 
+| Cta       | yoga-ui-cta         | 
+| [WIP] Chart Card       | yoga-ui-chart-card         | 
 
 ### WIP
 This is very much a Work In Progress. Still need to make a whole lot including:

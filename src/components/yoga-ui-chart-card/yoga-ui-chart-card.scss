@@ -1,0 +1,20 @@
+.chart-card {
+  padding: var(--space-24);
+  position: relative;
+}
+
+.chart-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-12);
+}
+
+.chart-card__handle {
+  margin-right: -8px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
