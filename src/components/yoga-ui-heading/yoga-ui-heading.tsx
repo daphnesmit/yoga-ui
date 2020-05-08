@@ -11,6 +11,7 @@ export class YogaUiHeading {
   @Prop() as!: Heading;
   @Prop() styleAs: Heading;
   @Prop() variant: string;
+  @Prop() spaceBottom: number;
 
   render() {
     return (
@@ -18,6 +19,9 @@ export class YogaUiHeading {
         class={{
           [`${this.styleAs}`]: !!this.styleAs,
           [`heading--${this.variant}`]: !!this.variant
+        }}
+        style={{
+          marginBottom: `${this.spaceBottom}px`
         }}
       >
         <slot></slot>

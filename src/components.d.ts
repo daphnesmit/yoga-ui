@@ -51,6 +51,7 @@ export namespace Components {
     }
     interface YogaUiHeading {
         "as": Heading;
+        "spaceBottom": number;
         "styleAs": Heading;
         "variant": string;
     }
@@ -243,6 +244,7 @@ declare namespace LocalJSX {
     }
     interface YogaUiHeading {
         "as": Heading;
+        "spaceBottom"?: number;
         "styleAs"?: Heading;
         "variant"?: string;
     }
