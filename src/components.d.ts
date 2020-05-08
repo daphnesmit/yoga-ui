@@ -32,6 +32,11 @@ export namespace Components {
     interface YogaUiCategory {
     }
     interface YogaUiChartCard {
+        "category": string;
+    }
+    interface YogaUiCircleProgress {
+        "color": string;
+        "percentage": string;
     }
     interface YogaUiClickable {
     }
@@ -61,6 +66,11 @@ export namespace Components {
     interface YogaUiRow {
     }
     interface YogaUiSection {
+    }
+    interface YogaUiText {
+        "as": Text;
+        "styleAs": Text;
+        "variant": string;
     }
 }
 declare global {
@@ -93,6 +103,12 @@ declare global {
     var HTMLYogaUiChartCardElement: {
         prototype: HTMLYogaUiChartCardElement;
         new (): HTMLYogaUiChartCardElement;
+    };
+    interface HTMLYogaUiCircleProgressElement extends Components.YogaUiCircleProgress, HTMLStencilElement {
+    }
+    var HTMLYogaUiCircleProgressElement: {
+        prototype: HTMLYogaUiCircleProgressElement;
+        new (): HTMLYogaUiCircleProgressElement;
     };
     interface HTMLYogaUiClickableElement extends Components.YogaUiClickable, HTMLStencilElement {
     }
@@ -154,12 +170,19 @@ declare global {
         prototype: HTMLYogaUiSectionElement;
         new (): HTMLYogaUiSectionElement;
     };
+    interface HTMLYogaUiTextElement extends Components.YogaUiText, HTMLStencilElement {
+    }
+    var HTMLYogaUiTextElement: {
+        prototype: HTMLYogaUiTextElement;
+        new (): HTMLYogaUiTextElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "yoga-ui-button": HTMLYogaUiButtonElement;
         "yoga-ui-card": HTMLYogaUiCardElement;
         "yoga-ui-category": HTMLYogaUiCategoryElement;
         "yoga-ui-chart-card": HTMLYogaUiChartCardElement;
+        "yoga-ui-circle-progress": HTMLYogaUiCircleProgressElement;
         "yoga-ui-clickable": HTMLYogaUiClickableElement;
         "yoga-ui-col": HTMLYogaUiColElement;
         "yoga-ui-container": HTMLYogaUiContainerElement;
@@ -170,6 +193,7 @@ declare global {
         "yoga-ui-progress": HTMLYogaUiProgressElement;
         "yoga-ui-row": HTMLYogaUiRowElement;
         "yoga-ui-section": HTMLYogaUiSectionElement;
+        "yoga-ui-text": HTMLYogaUiTextElement;
     }
 }
 declare namespace LocalJSX {
@@ -199,6 +223,11 @@ declare namespace LocalJSX {
     interface YogaUiCategory {
     }
     interface YogaUiChartCard {
+        "category"?: string;
+    }
+    interface YogaUiCircleProgress {
+        "color"?: string;
+        "percentage"?: string;
     }
     interface YogaUiClickable {
     }
@@ -208,7 +237,7 @@ declare namespace LocalJSX {
     interface YogaUiContainer {
     }
     interface YogaUiCta {
-        "onCtaButtonClick"?: (event: CustomEvent<any>) => void;
+        "onOnButtonClick"?: (event: CustomEvent<any>) => void;
     }
     interface YogaUiDotsHandle {
     }
@@ -230,12 +259,18 @@ declare namespace LocalJSX {
     }
     interface YogaUiSection {
     }
+    interface YogaUiText {
+        "as"?: Text;
+        "styleAs"?: Text;
+        "variant"?: string;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "yoga-ui-button": YogaUiButton;
         "yoga-ui-card": YogaUiCard;
         "yoga-ui-category": YogaUiCategory;
         "yoga-ui-chart-card": YogaUiChartCard;
+        "yoga-ui-circle-progress": YogaUiCircleProgress;
         "yoga-ui-clickable": YogaUiClickable;
         "yoga-ui-col": YogaUiCol;
         "yoga-ui-container": YogaUiContainer;
@@ -246,6 +281,7 @@ declare namespace LocalJSX {
         "yoga-ui-progress": YogaUiProgress;
         "yoga-ui-row": YogaUiRow;
         "yoga-ui-section": YogaUiSection;
+        "yoga-ui-text": YogaUiText;
     }
 }
 export { LocalJSX as JSX };
@@ -257,6 +293,7 @@ declare module "@stencil/core" {
             "yoga-ui-card": LocalJSX.YogaUiCard & JSXBase.HTMLAttributes<HTMLYogaUiCardElement>;
             "yoga-ui-category": LocalJSX.YogaUiCategory & JSXBase.HTMLAttributes<HTMLYogaUiCategoryElement>;
             "yoga-ui-chart-card": LocalJSX.YogaUiChartCard & JSXBase.HTMLAttributes<HTMLYogaUiChartCardElement>;
+            "yoga-ui-circle-progress": LocalJSX.YogaUiCircleProgress & JSXBase.HTMLAttributes<HTMLYogaUiCircleProgressElement>;
             "yoga-ui-clickable": LocalJSX.YogaUiClickable & JSXBase.HTMLAttributes<HTMLYogaUiClickableElement>;
             "yoga-ui-col": LocalJSX.YogaUiCol & JSXBase.HTMLAttributes<HTMLYogaUiColElement>;
             "yoga-ui-container": LocalJSX.YogaUiContainer & JSXBase.HTMLAttributes<HTMLYogaUiContainerElement>;
@@ -267,6 +304,7 @@ declare module "@stencil/core" {
             "yoga-ui-progress": LocalJSX.YogaUiProgress & JSXBase.HTMLAttributes<HTMLYogaUiProgressElement>;
             "yoga-ui-row": LocalJSX.YogaUiRow & JSXBase.HTMLAttributes<HTMLYogaUiRowElement>;
             "yoga-ui-section": LocalJSX.YogaUiSection & JSXBase.HTMLAttributes<HTMLYogaUiSectionElement>;
+            "yoga-ui-text": LocalJSX.YogaUiText & JSXBase.HTMLAttributes<HTMLYogaUiTextElement>;
         }
     }
 }

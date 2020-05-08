@@ -41,11 +41,21 @@
         </yoga-ui-section>
         <yoga-ui-section>
           <h2>Chart Card</h2>
-          <yoga-ui-chart-card>
-            <yoga-ui-heading as="h3" style-as="h2">Runfalcon</yoga-ui-heading>
-            <p>Activities: 91 from December 2018</p>
-            <yoga-ui-progress percentage="70"/>
-          </yoga-ui-chart-card>
+
+          <yoga-ui-row>
+            <yoga-ui-col cols="[12,6,4]">
+              <yoga-ui-chart-card category="Gear">
+                <yoga-ui-heading as="h3" style-as="h2">Runfalcon</yoga-ui-heading>
+                <yoga-ui-text as="p"><yoga-ui-text variant="primary">Activities: 91</yoga-ui-text> from December 2018</yoga-ui-text>
+                <yoga-ui-progress percentage="70"/>
+              </yoga-ui-chart-card>
+            </yoga-ui-col>
+            <yoga-ui-col cols="[12,6,4]">
+              <yoga-ui-chart-card category="Statistics">
+                <yoga-ui-circle-progress percentage="75"/>
+              </yoga-ui-chart-card>
+            </yoga-ui-col>
+          </yoga-ui-row>
         </yoga-ui-section>
       </yoga-ui-col>
     </yoga-ui-row>

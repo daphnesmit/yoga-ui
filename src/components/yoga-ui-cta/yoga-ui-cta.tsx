@@ -1,4 +1,4 @@
-import { Component, Event, h, EventEmitter } from "@stencil/core";
+import { Component, Event, h } from "@stencil/core";
 
 @Component({
   tag: "yoga-ui-cta",
@@ -6,11 +6,7 @@ import { Component, Event, h, EventEmitter } from "@stencil/core";
   shadow: true
 })
 export class YogaUiCta {
-  @Event() ctaButtonClick: EventEmitter;
-
-  handleButtonClick() {
-    this.ctaButtonClick.emit();
-  }
+  @Event() onButtonClick: (event: MouseEvent) => void;
 
   render() {
     return (
@@ -24,8 +20,8 @@ export class YogaUiCta {
           <yoga-ui-heading class="cta__heading" as="h3" style-as="h2">
             Make progress
           </yoga-ui-heading>
-          <span class="cta__text">with training plan</span>
-          <yoga-ui-button class="cta__button" onClick={this.handleButtonClick}>
+          <yoga-ui-text class="cta__text">with training plan</yoga-ui-text>
+          <yoga-ui-button class="cta__button" onClick={this.onButtonClick}>
             Buy plan
           </yoga-ui-button>
         </div>
