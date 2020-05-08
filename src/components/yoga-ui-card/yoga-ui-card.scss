@@ -4,3 +4,7 @@
   box-shadow: var(--shadow-default);
   border-radius: 4px;
 }
+
+.card--highlighted {
+  box-shadow: var(--shadow-heavy);
+}
