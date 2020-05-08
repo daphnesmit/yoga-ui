@@ -2,7 +2,7 @@ $size: 4px;
 
 .dot {
   position: relative;
-  width: $size;
+  width: $size * 4;
   height: $size * 4;
 
   &:hover {
