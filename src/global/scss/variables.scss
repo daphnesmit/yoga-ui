@@ -4,3 +4,24 @@ $breakpoints: (
   lg: 64em,
   xl: 80em
 );
+
+$spaces: (
+  0: --space-0,
+  1: --space-1,
+  2: --space-2,
+  3: --space-3,
+  4: --space-4,
+  5: --space-5,
+  6: --space-6,
+  8: --space-8,
+  10: --space-10,
+  12: --space-12,
+  16: --space-16,
+  20: --space-20,
+  24: --space-24,
+  32: --space-32,
+  40: --space-40,
+  48: --space-48,
+  56: --space-56,
+  64: --space-64
+);

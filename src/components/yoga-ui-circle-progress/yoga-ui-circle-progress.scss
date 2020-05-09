@@ -1,8 +1,67 @@
-:host {
-  width: 170px;
-  height: 170px;
-  max-width: 100%;
-  display: block;
-  margin: auto;
-  padding: var(--space-24);
+.circle-progress {
+  position: relative;
+  width: 180px;
+  height: 180px;
 }
+
+.circle-progress__container {
+  transform: rotate(-90deg);
+}
+
+.circle-progress__back {
+  fill: none;
+  stroke: var(--color-white);
+  stroke-width: 8px;
+}
+
+.circle-progress__inner {
+  fill: none;
+  stroke: var(--color-secondary);
+  stroke-width: 8px;
+}
+
+.circle-progress__circle {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 8px;
+  stroke-dasharray: 0 999;
+  stroke-dashoffset: 0px;
+  transition: stroke-dasharray 700ms linear 0s;
+}
+
+.circle-progress__text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+// .circle-progress {
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   border-radius: 50%;
+// }
+
+// .circle-progress__inner {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: var(--color-white);
+//   height: calc(100% - 32px);
+//   width: calc(100% - 32px);
+//   border-radius: 50%;
+//   box-shadow: inset 0px 0px 0px 8px var(--color-secondary);
+//   border: 8px solid white;
+// }
+
+// .circle-progress__text {
+//   font-size: 3rem;
+//   font-weight: bold;
+//   color: var(--color-text);
+// }

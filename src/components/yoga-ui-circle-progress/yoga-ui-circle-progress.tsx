@@ -1,4 +1,13 @@
-import { Component, Host, h, Prop } from "@stencil/core";
+import {
+  Element,
+  Event,
+  State,
+  Component,
+  h,
+  Prop,
+  EventEmitter,
+  Listen
+} from "@stencil/core";
 
 @Component({
   tag: "yoga-ui-circle-progress",
@@ -6,49 +15,95 @@ import { Component, Host, h, Prop } from "@stencil/core";
   shadow: true
 })
 export class YogaUiCircleProgress {
-  @Prop() percentage: string = "0";
+  @Element() private el: HTMLElement;
+
+  @Prop() percentage: number = 0;
   @Prop() color: string = "#7B4FFF";
+  @Prop() animateText: boolean = false;
+
+  @State() circle: HTMLElement;
+  @State() text: HTMLElement;
+
+  @Event() loadEvent: EventEmitter;
+
+  private setupVars() {
+    const {
+      el: { shadowRoot }
+    } = this;
+
+    this.circle = shadowRoot.querySelector("[js-hook-circle]");
+    this.text = shadowRoot.querySelector("[js-hook-text]");
+  }
+
+  animate(from, start) {
+    const now = new Date().getTime() - start;
+    const progress = now / 700;
+    const result =
+      this.percentage > from
+        ? Math.floor((this.percentage - from) * progress + from)
+        : Math.floor(from - (from - this.percentage) * progress);
+    if (this.animateText) {
+      this.text.innerHTML = progress < 1 ? `${result}` : `${this.percentage}`;
+    }
+    if (progress < 1) requestAnimationFrame(() => this.animate(from, start));
+  }
+
+  circleAnimation() {
+    this.circle.style.strokeDasharray = this.percentage * 4.65 + " 999";
+
+    const from = +this.text.dataset.progress;
+    const start = new Date().getTime();
+
+    this.text.setAttribute("data-progress", `${this.percentage}`);
+    requestAnimationFrame(() => this.animate(from, start));
+  }
+
+  componentDidLoad() {
+    this.setupVars();
+    this.loadEvent.emit();
+  }
+
+  @Listen("loadEvent")
+  init() {
+    setTimeout(() => requestAnimationFrame(() => this.circleAnimation()), 1000);
+  }
+
   render() {
     return (
-      <Host>
-        <div
-          style={{
-            width: `100%`,
-            height: `100%`,
-            display: `flex`,
-            alignItems: `center`,
-            justifyContent: `center`,
-            background: `conic-gradient(${this.color} ${
-              this.percentage
-            }%, 0, #ecf0f1 ${(100 - parseInt(this.percentage)).toString()}%)`,
-            borderRadius: `50%`
-          }}
+      <div class="circle-progress">
+        <svg
+          class="circle-progress__container"
+          width="180px"
+          height="180px"
+          xmlns="http://www.w3.org/2000/svg"
+          js-hook-container
         >
-          <div
-            style={{
-              display: `flex`,
-              alignItems: `center`,
-              justifyContent: `center`,
-              backgroundColor: `#fff`,
-              height: `calc(100% - 16px)`,
-              width: `calc(100% - 16px)`,
-              borderRadius: `50%`,
-              boxShadow: `0px 0px 7px 0px rgba(0, 0, 0, 0.1)`
-            }}
-          >
-            <span
-              style={{
-                fontFamily: `"Helvetica Neue", Helvetica, Arial, Verdana, sans-serif`,
-                fontSize: `3rem`,
-                fontWeight: `bold`,
-                color: "#6B6974"
-              }}
-            >
-              {this.percentage}
-            </span>
-          </div>
+          <circle
+            class="circle-progress__inner"
+            cx="90"
+            cy="90"
+            r="66"
+            js-hook-inner
+          ></circle>
+          <circle
+            class="circle-progress__back"
+            cx="90"
+            cy="90"
+            r="82"
+            js-hook-back
+          ></circle>
+          <circle
+            class="circle-progress__circle"
+            cx="90"
+            cy="90"
+            r="82"
+            js-hook-circle
+          ></circle>
+        </svg>
+        <div class="circle-progress__text" data-progress="0" js-hook-text>
+          {this.animateText ? 0 : this.percentage}
         </div>
-      </Host>
+      </div>
     );
   }
 }

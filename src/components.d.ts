@@ -35,8 +35,9 @@ export namespace Components {
         "category": string;
     }
     interface YogaUiCircleProgress {
+        "animateText": boolean;
         "color": string;
-        "percentage": string;
+        "percentage": number;
     }
     interface YogaUiClickable {
     }
@@ -67,6 +68,11 @@ export namespace Components {
     interface YogaUiRow {
     }
     interface YogaUiSection {
+    }
+    interface YogaUiSpacer {
+        "p": number;
+        "px": number;
+        "py": number;
     }
     interface YogaUiText {
         "as": Text;
@@ -171,6 +177,12 @@ declare global {
         prototype: HTMLYogaUiSectionElement;
         new (): HTMLYogaUiSectionElement;
     };
+    interface HTMLYogaUiSpacerElement extends Components.YogaUiSpacer, HTMLStencilElement {
+    }
+    var HTMLYogaUiSpacerElement: {
+        prototype: HTMLYogaUiSpacerElement;
+        new (): HTMLYogaUiSpacerElement;
+    };
     interface HTMLYogaUiTextElement extends Components.YogaUiText, HTMLStencilElement {
     }
     var HTMLYogaUiTextElement: {
@@ -194,6 +206,7 @@ declare global {
         "yoga-ui-progress": HTMLYogaUiProgressElement;
         "yoga-ui-row": HTMLYogaUiRowElement;
         "yoga-ui-section": HTMLYogaUiSectionElement;
+        "yoga-ui-spacer": HTMLYogaUiSpacerElement;
         "yoga-ui-text": HTMLYogaUiTextElement;
     }
 }
@@ -227,8 +240,10 @@ declare namespace LocalJSX {
         "category"?: string;
     }
     interface YogaUiCircleProgress {
+        "animateText"?: boolean;
         "color"?: string;
-        "percentage"?: string;
+        "onLoadEvent"?: (event: CustomEvent<any>) => void;
+        "percentage"?: number;
     }
     interface YogaUiClickable {
     }
@@ -261,6 +276,11 @@ declare namespace LocalJSX {
     }
     interface YogaUiSection {
     }
+    interface YogaUiSpacer {
+        "p"?: number;
+        "px"?: number;
+        "py"?: number;
+    }
     interface YogaUiText {
         "as"?: Text;
         "styleAs"?: Text;
@@ -283,6 +303,7 @@ declare namespace LocalJSX {
         "yoga-ui-progress": YogaUiProgress;
         "yoga-ui-row": YogaUiRow;
         "yoga-ui-section": YogaUiSection;
+        "yoga-ui-spacer": YogaUiSpacer;
         "yoga-ui-text": YogaUiText;
     }
 }
@@ -306,6 +327,7 @@ declare module "@stencil/core" {
             "yoga-ui-progress": LocalJSX.YogaUiProgress & JSXBase.HTMLAttributes<HTMLYogaUiProgressElement>;
             "yoga-ui-row": LocalJSX.YogaUiRow & JSXBase.HTMLAttributes<HTMLYogaUiRowElement>;
             "yoga-ui-section": LocalJSX.YogaUiSection & JSXBase.HTMLAttributes<HTMLYogaUiSectionElement>;
+            "yoga-ui-spacer": LocalJSX.YogaUiSpacer & JSXBase.HTMLAttributes<HTMLYogaUiSpacerElement>;
             "yoga-ui-text": LocalJSX.YogaUiText & JSXBase.HTMLAttributes<HTMLYogaUiTextElement>;
         }
     }
