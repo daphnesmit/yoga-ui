@@ -14,4 +14,15 @@
     padding-left: var($value);
     padding-right: var($value);
   }
+  :host(.m-#{$name}) {
+    margin: var($value);
+  }
+  :host(.my-#{$name}) {
+    margin-top: var($value);
+    margin-bottom: var($value);
+  }
+  :host(.mx-#{$name}) {
+    margin-left: var($value);
+    margin-right: var($value);
+  }
 }

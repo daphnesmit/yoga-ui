@@ -1,4 +1,4 @@
-import { text } from "@storybook/addon-knobs";
+import { text, select } from "@storybook/addon-knobs";
 import readme from "./readme.md";
 
 export default {
@@ -12,4 +12,4 @@ export default {
 };
 
 export const example = () =>
-  `<yoga-ui-button>${text("label", "I am a Button")}</yoga-ui-button>`;
+  `<yoga-ui-button variant="${select('variant', ["primary", "secondary"], "primary")}">${text("label", "I am a Button")}</yoga-ui-button>`;

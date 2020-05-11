@@ -7,26 +7,13 @@ import { withTests } from "@storybook/addon-jest";
 import results from "../jest-test-results.json";
 import { defineCustomElements } from "../dist/esm/loader";
 
+import theme from "./theme";
+
 addParameters({
   options: {
-    panelPosition: "right",
+    panelPosition: "bottom",
+    theme
   },
-
-  backgrounds: [
-    { name: "white", value: "#ffffff", default: true },
-    { name: "light", value: "#eeeeee" },
-    { name: "gainsboro", value: "#DCDCDC" },
-    { name: "lightgrey", value: "#D3D3D3" },
-    { name: "silver", value: "#C0C0C0" },
-    { name: "darkgrey", value: "#A9A9A9" },
-    { name: "grey", value: "#808080" },
-    { name: "dimgrey", value: "#696969" },
-    { name: "lightslategrey", value: "#778899" },
-    { name: "slategrey", value: "#708090" },
-    { name: "darkslategrey", value: "#2F4F4F" },
-    { name: "dark", value: "#555555" },
-    { name: "black", value: "#000000" },
-  ],
 });
 
 addDecorator(withKnobs);
@@ -36,14 +23,14 @@ addDecorator(withActions("click"));
 addDecorator(
   withTests({
     results,
-    filesExt: ".spec.ts",
+    filesExt: ".spec.ts"
   })
 );
 
 configureActions({
   depth: 100,
   // Limit the number of items logged into the actions panel
-  limit: 20,
+  limit: 20
 });
 
 defineCustomElements();

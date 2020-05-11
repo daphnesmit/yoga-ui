@@ -6,7 +6,7 @@ import { Component, Event, h } from "@stencil/core";
   shadow: true
 })
 export class YogaUiCta {
-  @Event() onButtonClick: (event: MouseEvent) => void;
+  @Event() buttonClick: (event: MouseEvent) => void;
 
   render() {
     return (
@@ -21,7 +21,7 @@ export class YogaUiCta {
             Make progress
           </yoga-ui-heading>
           <yoga-ui-text class="cta__text">with training plan</yoga-ui-text>
-          <yoga-ui-button class="cta__button" onClick={this.onButtonClick}>
+          <yoga-ui-button class="cta__button" onClick={this.buttonClick}>
             Buy plan
           </yoga-ui-button>
         </div>

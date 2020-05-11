@@ -18,7 +18,6 @@ export class YogaUiCircleProgress {
   @Element() private el: HTMLElement;
 
   @Prop() percentage: number = 0;
-  @Prop() color: string = "#7B4FFF";
   @Prop() animateText: boolean = false;
 
   @State() circle: HTMLElement;

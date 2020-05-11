@@ -27,7 +27,6 @@ export const config: Config = {
     {
       type: "www",
       serviceWorker: null, // disable service workers
-      dir: "public"
       // copy: [{ src: "assets/fonts", dest: "static/fonts" }]
     }
   ]

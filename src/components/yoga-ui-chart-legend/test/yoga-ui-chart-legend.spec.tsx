@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { YogaUiChartCard } from '../yoga-ui-chart-card';
+import { YogaUiChartLegend } from '../yoga-ui-chart-legend';
 
-describe('yoga-ui-chart-card', () => {
+describe('yoga-ui-chart-legend', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [YogaUiChartCard],
-      html: `<yoga-ui-chart-card></yoga-ui-chart-card>`,
+      components: [YogaUiChartLegend],
+      html: `<yoga-ui-chart-legend></yoga-ui-chart-legend>`,
     });
     expect(page.root).toEqualHtml(`
-      <yoga-ui-chart-card>
+      <yoga-ui-chart-legend>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </yoga-ui-chart-card>
+      </yoga-ui-chart-legend>
     `);
   });
 });
