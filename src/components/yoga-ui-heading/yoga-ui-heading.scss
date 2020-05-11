@@ -54,3 +54,10 @@ h4,
 .heading--dark {
   color: var(--color-black);
 }
+
+.heading--center-mobile {
+  text-align: center;
+  @include breakpoint("md") {
+    text-align: left;
+  }
+}

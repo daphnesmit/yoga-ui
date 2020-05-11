@@ -6,6 +6,12 @@
   :host(.p-#{$name}) {
     padding: var($value);
   }
+  :host(.pt-#{$name}) {
+    padding-top: var($value);
+  }
+  :host(.pb-#{$name}) {
+    padding-bottom: var($value);
+  }
   :host(.py-#{$name}) {
     padding-top: var($value);
     padding-bottom: var($value);
@@ -16,6 +22,12 @@
   }
   :host(.m-#{$name}) {
     margin: var($value);
+  }
+  :host(.mt-#{$name}) {
+    margin-top: var($value);
+  }
+  :host(.mb-#{$name}) {
+    margin-bottom: var($value);
   }
   :host(.my-#{$name}) {
     margin-top: var($value);

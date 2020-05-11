@@ -25,13 +25,18 @@ export class YogaUiHeading {
    * Add margin bottom to the heading.
    */
   @Prop() spaceBottom: number;
+  /**
+   * Center the text on mobile
+   */
+  @Prop() centerMobile: boolean;
 
   render() {
     return (
       <this.as
         class={{
           [`${this.styleAs}`]: !!this.styleAs,
-          [`heading--${this.variant}`]: !!this.variant
+          [`heading--${this.variant}`]: !!this.variant,
+          [`heading--center-mobile`]: !!this.centerMobile
         }}
         style={{
           marginBottom: `${this.spaceBottom}px`

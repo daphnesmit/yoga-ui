@@ -86,6 +86,10 @@ export namespace Components {
          */
         "as": Heading;
         /**
+          * Center the text on mobile
+         */
+        "centerMobile": boolean;
+        /**
           * Add margin bottom to the heading.
          */
         "spaceBottom": number;
@@ -132,6 +136,14 @@ export namespace Components {
          */
         "m": number;
         /**
+          * Margin bottom
+         */
+        "mb": number;
+        /**
+          * Margin top
+         */
+        "mt": number;
+        /**
           * Margin left and padding right
          */
         "mx": number;
@@ -143,6 +155,14 @@ export namespace Components {
           * Padding
          */
         "p": number;
+        /**
+          * Padding bottom
+         */
+        "pb": number;
+        /**
+          * Padding top
+         */
+        "pt": number;
         /**
           * Padding left and padding right
          */
@@ -157,6 +177,10 @@ export namespace Components {
           * The element to use for the text. Defaults to `span`
          */
         "as": Text;
+        /**
+          * Center the text on mobile
+         */
+        "centerMobile": boolean;
         /**
           * The style to use for the text. Example: Style a p as a span by adding styleAs
          */
@@ -372,6 +396,10 @@ declare namespace LocalJSX {
          */
         "as": Heading;
         /**
+          * Center the text on mobile
+         */
+        "centerMobile"?: boolean;
+        /**
           * Add margin bottom to the heading.
          */
         "spaceBottom"?: number;
@@ -418,6 +446,14 @@ declare namespace LocalJSX {
          */
         "m"?: number;
         /**
+          * Margin bottom
+         */
+        "mb"?: number;
+        /**
+          * Margin top
+         */
+        "mt"?: number;
+        /**
           * Margin left and padding right
          */
         "mx"?: number;
@@ -429,6 +465,14 @@ declare namespace LocalJSX {
           * Padding
          */
         "p"?: number;
+        /**
+          * Padding bottom
+         */
+        "pb"?: number;
+        /**
+          * Padding top
+         */
+        "pt"?: number;
         /**
           * Padding left and padding right
          */
@@ -443,6 +487,10 @@ declare namespace LocalJSX {
           * The element to use for the text. Defaults to `span`
          */
         "as"?: Text;
+        /**
+          * Center the text on mobile
+         */
+        "centerMobile"?: boolean;
         /**
           * The style to use for the text. Example: Style a p as a span by adding styleAs
          */

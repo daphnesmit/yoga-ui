@@ -12,6 +12,7 @@ import people from "../../assets/svg/icon/people.svg";
 import stats from "../../assets/svg/icon/stats.svg";
 
 import trainingIllustration from "../../assets/svg/training-illustration.svg";
+import logo from "../../assets/svg/yoga-ui-logo.svg";
 
 const icons = {
   plus,
@@ -24,7 +25,8 @@ const icons = {
   lightning,
   people,
   stats,
-  trainingIllustration
+  trainingIllustration,
+  logo
 };
 export type IconOption = keyof typeof icons;
 

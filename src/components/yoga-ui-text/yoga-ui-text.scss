@@ -28,3 +28,11 @@ b {
 .text--light {
   color: var(--color-text-light);
 }
+
+.text--center-mobile {
+  text-align: center;
+
+  @include breakpoint("md") {
+    text-align: left;
+  }
+}

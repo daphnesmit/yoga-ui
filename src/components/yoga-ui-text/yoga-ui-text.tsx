@@ -31,13 +31,18 @@ export class YogaUiText {
    * The text variant. Will render a modifier class, so if you send 'primary' it will become: `text--primary`
    */
   @Prop() variant: string;
+  /**
+   * Center the text on mobile
+   */
+  @Prop() centerMobile: boolean;
 
   render() {
     return (
       <this.as
         class={{
           [`${this.styleAs}`]: !!this.styleAs,
-          [`text--${this.variant}`]: !!this.variant
+          [`text--${this.variant}`]: !!this.variant,
+          [`text--center-mobile`]: !!this.centerMobile
         }}
       >
         <slot></slot>
