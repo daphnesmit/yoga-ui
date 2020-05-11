@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type      | Default     |
-| ----------- | ------------ | ----------- | --------- | ----------- |
-| `category`  | `category`   |             | `string`  | `undefined` |
-| `hasHandle` | `has-handle` |             | `boolean` | `undefined` |
+| Property    | Attribute    | Description                                                                    | Type      | Default     |
+| ----------- | ------------ | ------------------------------------------------------------------------------ | --------- | ----------- |
+| `category`  | `category`   | Adds a category                                                                | `string`  | `undefined` |
+| `hasHandle` | `has-handle` | If `true`, it will show a dots-handle button on the right. Defaults to `false` | `boolean` | `undefined` |
 
 
 ## Events

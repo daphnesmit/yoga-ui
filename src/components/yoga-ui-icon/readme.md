@@ -7,12 +7,12 @@
 
 ## Properties
 
-| Property            | Attribute | Description | Type                                                                                                                                                   | Default     |
-| ------------------- | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| `color`             | `color`   |             | `string`                                                                                                                                               | `undefined` |
-| `height`            | `height`  |             | `string`                                                                                                                                               | `undefined` |
-| `icon` _(required)_ | `icon`    |             | `"award" \| "calendar" \| "filter" \| "heartbeat" \| "layout" \| "lightning" \| "people" \| "plus" \| "stats" \| "training" \| "trainingIllustration"` | `undefined` |
-| `width`             | `width`   |             | `string`                                                                                                                                               | `undefined` |
+| Property            | Attribute | Description                                                                                            | Type                                                                                                                                                             | Default     |
+| ------------------- | --------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `color`             | `color`   | The icon color. Will render a modifier class, so if you send 'primary' it will become: `icon--primary` | `string`                                                                                                                                                         | `undefined` |
+| `height`            | `height`  | The icon height                                                                                        | `string`                                                                                                                                                         | `undefined` |
+| `icon` _(required)_ | `icon`    | The icon to render. For example `calendar`                                                             | `"award" \| "calendar" \| "filter" \| "heartbeat" \| "layout" \| "lightning" \| "logo" \| "people" \| "plus" \| "stats" \| "training" \| "trainingIllustration"` | `undefined` |
+| `width`             | `width`   | The icon width                                                                                         | `string`                                                                                                                                                         | `undefined` |
 
 
 ## Dependencies

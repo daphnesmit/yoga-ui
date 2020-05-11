@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property      | Attribute | Description | Type     | Default     |
-| ------------- | --------- | ----------- | -------- | ----------- |
-| `items`       | `items`   |             | `string` | `undefined` |
-| `parsedItems` | --        |             | `Item[]` | `undefined` |
+| Property      | Attribute | Description                                     | Type     | Default     |
+| ------------- | --------- | ----------------------------------------------- | -------- | ----------- |
+| `items`       | `items`   | The JSON stringified items to render            | `string` | `undefined` |
+| `parsedItems` | --        | The parsed items to use in JSX. Computed value. | `Item[]` | `undefined` |
 
 
 ----------------------------------------------
