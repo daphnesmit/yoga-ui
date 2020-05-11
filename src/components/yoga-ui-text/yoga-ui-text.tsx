@@ -19,8 +19,17 @@ type Text =
   shadow: true
 })
 export class YogaUiText {
+  /**
+   * The element to use for the text. Defaults to `span`
+   */
   @Prop() as: Text = "span";
+  /**
+   * The style to use for the text. Example: Style a p as a span by adding styleAs
+   */
   @Prop() styleAs: Text;
+  /**
+   * The text variant. Will render a modifier class, so if you send 'primary' it will become: `text--primary`
+   */
   @Prop() variant: string;
 
   render() {

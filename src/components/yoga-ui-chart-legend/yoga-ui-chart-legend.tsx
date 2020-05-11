@@ -10,8 +10,15 @@ interface Item {
   shadow: true
 })
 export class YogaUiChartLegend {
+  /**
+   * The JSON stringified items to render
+   */
   @Prop() items: string;
-  @Prop() parsedItems: Item[];
+
+  /**
+   * The parsed items to use in JSX. Computed value.
+   */
+  @Prop({ mutable: true }) parsedItems: Item[];
 
   componentWillLoad() {
     if (typeof this.items === "string") this.parseItemsProp(this.items);

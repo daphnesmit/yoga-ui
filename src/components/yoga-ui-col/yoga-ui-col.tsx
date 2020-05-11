@@ -8,29 +8,36 @@ import { grid } from "../../utils/grid";
   shadow: true
 })
 export class YogaUiCol {
+  /**
+   * The JSON stringified colums per breakpoint. Example: `cols="[12,6,4]"`
+   */
   @Prop() cols: string | number;
+  /**
+   * The parsed cols to use in JSX. Computed value.
+   */
+  @Prop({ mutable: true }) parsedCols: number[];
 
   componentWillLoad() {
     this.parseColsProp(this.cols);
   }
 
-  getColumnClassesByBreakpoint(col, i) {
+  getColumnClassesByBreakpoint(col: number, i: number) {
     const firstColumnClass = `col-${col}`;
     if (!i) {
       return firstColumnClass;
     }
     return col && `col-${grid.breakpoints[i - 1]}-${col}`;
   }
-  
+
   getColumnClasses() {
-    return this.cols && Array.isArray(this.cols)
-      ? this.cols.map(this.getColumnClassesByBreakpoint).join(" ")
+    return this.parsedCols && this.parsedCols.length
+      ? this.parsedCols.map(this.getColumnClassesByBreakpoint).join(" ")
       : `col-${this.cols}`;
   }
 
   @Watch("cols")
   parseColsProp(cols: string | number) {
-    if (cols && typeof cols === "string") this.cols = JSON.parse(cols);
+    if (cols && typeof cols === "string") this.parsedCols = JSON.parse(cols);
   }
   render() {
     return (

@@ -6,11 +6,29 @@ import { Component, Host, h, Prop } from "@stencil/core";
   shadow: true
 })
 export class YogaUiSpacer {
+  /**
+   * Padding
+   */
   @Prop() p: number;
+  /**
+   * Padding left and padding right
+   */
   @Prop() px: number;
+  /**
+   * Padding top and padding bottom
+   */
   @Prop() py: number;
+  /**
+   * Margin
+   */
   @Prop() m: number;
+  /**
+   * Margin left and padding right
+   */
   @Prop() mx: number;
+  /**
+   * Margin top and padding bottom
+   */
   @Prop() my: number;
 
   render() {

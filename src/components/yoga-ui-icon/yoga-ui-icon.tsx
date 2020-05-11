@@ -34,9 +34,21 @@ export type IconOption = keyof typeof icons;
   shadow: true
 })
 export class YogaUiIcon {
+  /**
+   * The icon to render. For example `calendar`
+   */
   @Prop() icon!: IconOption;
+  /**
+   * The icon width
+   */
   @Prop() width: string;
+  /**
+   * The icon height
+   */
   @Prop() height: string;
+  /**
+   * The icon color. Will render a modifier class, so if you send 'primary' it will become: `icon--primary`
+   */
   @Prop() color: string;
 
   render() {

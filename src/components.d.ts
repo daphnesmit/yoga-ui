@@ -25,16 +25,31 @@ export namespace Components {
           * Adds a svg icon in front
          */
         "startIcon": IconOption;
+        /**
+          * The button variant. primary or secondary. Defaults to `primary`
+         */
         "variant": string;
     }
     interface YogaUiCard {
+        /**
+          * Adds a category
+         */
         "category": string;
+        /**
+          * If `true`, it will show a dots-handle button on the right. Defaults to `false`
+         */
         "hasHandle": boolean;
     }
     interface YogaUiCategory {
     }
     interface YogaUiChartLegend {
+        /**
+          * The JSON stringified items to render
+         */
         "items": string;
+        /**
+          * The parsed items to use in JSX. Computed value.
+         */
         "parsedItems": Item[];
     }
     interface YogaUiCircleProgress {
@@ -50,7 +65,14 @@ export namespace Components {
     interface YogaUiClickable {
     }
     interface YogaUiCol {
+        /**
+          * The JSON stringified colums per breakpoint. Example: `cols="[12,6,4]"`
+         */
         "cols": string | number;
+        /**
+          * The parsed cols to use in JSX. Computed value.
+         */
+        "parsedCols": number[];
     }
     interface YogaUiContainer {
     }
@@ -59,15 +81,39 @@ export namespace Components {
     interface YogaUiDotsHandle {
     }
     interface YogaUiHeading {
+        /**
+          * The element to use for the heading.
+         */
         "as": Heading;
+        /**
+          * Add margin bottom to the heading.
+         */
         "spaceBottom": number;
+        /**
+          * The style to use for the heading. Example: Style a h2 as a h1 by adding styleAs
+         */
         "styleAs": Heading;
+        /**
+          * The heading variant. Example: medium, bold or dark
+         */
         "variant": string;
     }
     interface YogaUiIcon {
+        /**
+          * The icon color. Will render a modifier class, so if you send 'primary' it will become: `icon--primary`
+         */
         "color": string;
+        /**
+          * The icon height
+         */
         "height": string;
+        /**
+          * The icon to render. For example `calendar`
+         */
         "icon": IconOption;
+        /**
+          * The icon width
+         */
         "width": string;
     }
     interface YogaUiProgress {
@@ -81,16 +127,43 @@ export namespace Components {
     interface YogaUiSection {
     }
     interface YogaUiSpacer {
+        /**
+          * Margin
+         */
         "m": number;
+        /**
+          * Margin left and padding right
+         */
         "mx": number;
+        /**
+          * Margin top and padding bottom
+         */
         "my": number;
+        /**
+          * Padding
+         */
         "p": number;
+        /**
+          * Padding left and padding right
+         */
         "px": number;
+        /**
+          * Padding top and padding bottom
+         */
         "py": number;
     }
     interface YogaUiText {
+        /**
+          * The element to use for the text. Defaults to `span`
+         */
         "as": Text;
+        /**
+          * The style to use for the text. Example: Style a p as a span by adding styleAs
+         */
         "styleAs": Text;
+        /**
+          * The text variant. Will render a modifier class, so if you send 'primary' it will become: `text--primary`
+         */
         "variant": string;
     }
 }
@@ -235,17 +308,32 @@ declare namespace LocalJSX {
           * Adds a svg icon in front
          */
         "startIcon"?: IconOption;
+        /**
+          * The button variant. primary or secondary. Defaults to `primary`
+         */
         "variant"?: string;
     }
     interface YogaUiCard {
+        /**
+          * Adds a category
+         */
         "category"?: string;
+        /**
+          * If `true`, it will show a dots-handle button on the right. Defaults to `false`
+         */
         "hasHandle"?: boolean;
         "onHandleClick"?: (event: CustomEvent<any>) => void;
     }
     interface YogaUiCategory {
     }
     interface YogaUiChartLegend {
+        /**
+          * The JSON stringified items to render
+         */
         "items"?: string;
+        /**
+          * The parsed items to use in JSX. Computed value.
+         */
         "parsedItems"?: Item[];
     }
     interface YogaUiCircleProgress {
@@ -262,7 +350,14 @@ declare namespace LocalJSX {
     interface YogaUiClickable {
     }
     interface YogaUiCol {
+        /**
+          * The JSON stringified colums per breakpoint. Example: `cols="[12,6,4]"`
+         */
         "cols"?: string | number;
+        /**
+          * The parsed cols to use in JSX. Computed value.
+         */
+        "parsedCols"?: number[];
     }
     interface YogaUiContainer {
     }
@@ -272,15 +367,39 @@ declare namespace LocalJSX {
     interface YogaUiDotsHandle {
     }
     interface YogaUiHeading {
+        /**
+          * The element to use for the heading.
+         */
         "as": Heading;
+        /**
+          * Add margin bottom to the heading.
+         */
         "spaceBottom"?: number;
+        /**
+          * The style to use for the heading. Example: Style a h2 as a h1 by adding styleAs
+         */
         "styleAs"?: Heading;
+        /**
+          * The heading variant. Example: medium, bold or dark
+         */
         "variant"?: string;
     }
     interface YogaUiIcon {
+        /**
+          * The icon color. Will render a modifier class, so if you send 'primary' it will become: `icon--primary`
+         */
         "color"?: string;
+        /**
+          * The icon height
+         */
         "height"?: string;
+        /**
+          * The icon to render. For example `calendar`
+         */
         "icon": IconOption;
+        /**
+          * The icon width
+         */
         "width"?: string;
     }
     interface YogaUiProgress {
@@ -294,16 +413,43 @@ declare namespace LocalJSX {
     interface YogaUiSection {
     }
     interface YogaUiSpacer {
+        /**
+          * Margin
+         */
         "m"?: number;
+        /**
+          * Margin left and padding right
+         */
         "mx"?: number;
+        /**
+          * Margin top and padding bottom
+         */
         "my"?: number;
+        /**
+          * Padding
+         */
         "p"?: number;
+        /**
+          * Padding left and padding right
+         */
         "px"?: number;
+        /**
+          * Padding top and padding bottom
+         */
         "py"?: number;
     }
     interface YogaUiText {
+        /**
+          * The element to use for the text. Defaults to `span`
+         */
         "as"?: Text;
+        /**
+          * The style to use for the text. Example: Style a p as a span by adding styleAs
+         */
         "styleAs"?: Text;
+        /**
+          * The text variant. Will render a modifier class, so if you send 'primary' it will become: `text--primary`
+         */
         "variant"?: string;
     }
     interface IntrinsicElements {

@@ -6,10 +6,17 @@ import { Component, Event, Host, h, Prop } from "@stencil/core";
   shadow: true
 })
 export class YogaUiCard {
+  /**
+   * Adds a category 
+   */
   @Prop() category: string;
+
+   /**
+   * If `true`, it will show a dots-handle button on the right. Defaults to `false`
+   */
   @Prop() hasHandle: boolean;
   @Event() handleClick: (event: MouseEvent) => void;
-  
+
   render() {
     return (
       <Host>

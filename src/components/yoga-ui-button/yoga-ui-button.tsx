@@ -7,6 +7,10 @@ import { IconOption } from "../yoga-ui-icon/yoga-ui-icon";
   shadow: true
 })
 export class YogaUiButton {
+
+   /**
+   * The button variant. primary or secondary. Defaults to `primary`
+   */
   @Prop() variant = "primary";
    /**
    * If `true`, the button will be disabled. Defaults to `false`.
