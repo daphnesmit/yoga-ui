@@ -7,12 +7,12 @@
 
 ## Properties
 
-| Property            | Attribute | Description | Type     | Default     |
-| ------------------- | --------- | ----------- | -------- | ----------- |
-| `color`             | `color`   |             | `string` | `undefined` |
-| `height`            | `height`  |             | `string` | `undefined` |
-| `icon` _(required)_ | `icon`    |             | `string` | `undefined` |
-| `width`             | `width`   |             | `string` | `undefined` |
+| Property            | Attribute | Description | Type                                                                                                                                                   | Default     |
+| ------------------- | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| `color`             | `color`   |             | `string`                                                                                                                                               | `undefined` |
+| `height`            | `height`  |             | `string`                                                                                                                                               | `undefined` |
+| `icon` _(required)_ | `icon`    |             | `"award" \| "calendar" \| "filter" \| "heartbeat" \| "layout" \| "lightning" \| "people" \| "plus" \| "stats" \| "training" \| "trainingIllustration"` | `undefined` |
+| `width`             | `width`   |             | `string`                                                                                                                                               | `undefined` |
 
 
 ## Dependencies

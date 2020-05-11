@@ -7,13 +7,13 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type      | Default     |
-| ----------- | ------------ | ----------- | --------- | ----------- |
-| `disabled`  | `disabled`   |             | `boolean` | `undefined` |
-| `endIcon`   | `end-icon`   |             | `string`  | `undefined` |
-| `iconSize`  | `icon-size`  |             | `string`  | `undefined` |
-| `startIcon` | `start-icon` |             | `string`  | `undefined` |
-| `variant`   | `variant`    |             | `string`  | `"primary"` |
+| Property    | Attribute    | Description                                                  | Type                                                                                                                                                   | Default     |
+| ----------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| `disabled`  | `disabled`   | If `true`, the button will be disabled. Defaults to `false`. | `boolean`                                                                                                                                              | `undefined` |
+| `endIcon`   | `end-icon`   | Adds a svg icon at the end                                   | `"award" \| "calendar" \| "filter" \| "heartbeat" \| "layout" \| "lightning" \| "people" \| "plus" \| "stats" \| "training" \| "trainingIllustration"` | `undefined` |
+| `iconSize`  | `icon-size`  | Set the size if the icon                                     | `string`                                                                                                                                               | `undefined` |
+| `startIcon` | `start-icon` | Adds a svg icon in front                                     | `"award" \| "calendar" \| "filter" \| "heartbeat" \| "layout" \| "lightning" \| "people" \| "plus" \| "stats" \| "training" \| "trainingIllustration"` | `undefined` |
+| `variant`   | `variant`    |                                                              | `string`                                                                                                                                               | `"primary"` |
 
 
 ## Dependencies

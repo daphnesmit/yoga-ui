@@ -26,6 +26,7 @@ const icons = {
   stats,
   trainingIllustration
 };
+export type IconOption = keyof typeof icons;
 
 @Component({
   tag: "yoga-ui-icon",
@@ -33,7 +34,7 @@ const icons = {
   shadow: true
 })
 export class YogaUiIcon {
-  @Prop() icon!: string;
+  @Prop() icon!: IconOption;
   @Prop() width: string;
   @Prop() height: string;
   @Prop() color: string;

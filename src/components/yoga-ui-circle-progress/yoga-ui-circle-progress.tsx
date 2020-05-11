@@ -17,7 +17,14 @@ import {
 export class YogaUiCircleProgress {
   @Element() private el: HTMLElement;
 
+  /**
+   * The percentage of the circle that should be filled, for example 75%
+   */
   @Prop() percentage: number = 0;
+
+  /**
+   * If `true`, the text inside the circle will animate and count up. Defaults to `false`.
+   */
   @Prop() animateText: boolean = false;
 
   @State() circle: HTMLElement;
@@ -83,13 +90,6 @@ export class YogaUiCircleProgress {
             cy="90"
             r="66"
             js-hook-inner
-          ></circle>
-          <circle
-            class="circle-progress__back"
-            cx="90"
-            cy="90"
-            r="82"
-            js-hook-back
           ></circle>
           <circle
             class="circle-progress__circle"

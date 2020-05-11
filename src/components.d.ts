@@ -5,26 +5,26 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { IconOption, } from "./components/yoga-ui-icon/yoga-ui-icon";
+import { IconOption as IconOption1, } from "./components/yoga-ui-icon/yoga-ui-icon";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
     interface YogaUiButton {
+        /**
+          * If `true`, the button will be disabled. Defaults to `false`.
+         */
         "disabled": boolean;
-        "endIcon": string;
+        /**
+          * Adds a svg icon at the end
+         */
+        "endIcon": IconOption;
+        /**
+          * Set the size if the icon
+         */
         "iconSize": string;
-        "startIcon": string;
+        /**
+          * Adds a svg icon in front
+         */
+        "startIcon": IconOption;
         "variant": string;
     }
     interface YogaUiCard {
@@ -38,7 +38,13 @@ export namespace Components {
         "parsedItems": Item[];
     }
     interface YogaUiCircleProgress {
+        /**
+          * If `true`, the text inside the circle will animate and count up. Defaults to `false`.
+         */
         "animateText": boolean;
+        /**
+          * The percentage of the circle that should be filled, for example 75%
+         */
         "percentage": number;
     }
     interface YogaUiClickable {
@@ -61,10 +67,13 @@ export namespace Components {
     interface YogaUiIcon {
         "color": string;
         "height": string;
-        "icon": string;
+        "icon": IconOption;
         "width": string;
     }
     interface YogaUiProgress {
+        /**
+          * The percentage of the circle that should be filled, for example 75%
+         */
         "percentage": string;
     }
     interface YogaUiRow {
@@ -86,12 +95,6 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLYogaUiButtonElement extends Components.YogaUiButton, HTMLStencilElement {
     }
     var HTMLYogaUiButtonElement: {
@@ -195,7 +198,6 @@ declare global {
         new (): HTMLYogaUiTextElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
         "yoga-ui-button": HTMLYogaUiButtonElement;
         "yoga-ui-card": HTMLYogaUiCardElement;
         "yoga-ui-category": HTMLYogaUiCategoryElement;
@@ -216,25 +218,23 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface YogaUiButton {
+        /**
+          * If `true`, the button will be disabled. Defaults to `false`.
+         */
         "disabled"?: boolean;
-        "endIcon"?: string;
+        /**
+          * Adds a svg icon at the end
+         */
+        "endIcon"?: IconOption;
+        /**
+          * Set the size if the icon
+         */
         "iconSize"?: string;
-        "startIcon"?: string;
+        /**
+          * Adds a svg icon in front
+         */
+        "startIcon"?: IconOption;
         "variant"?: string;
     }
     interface YogaUiCard {
@@ -249,8 +249,14 @@ declare namespace LocalJSX {
         "parsedItems"?: Item[];
     }
     interface YogaUiCircleProgress {
+        /**
+          * If `true`, the text inside the circle will animate and count up. Defaults to `false`.
+         */
         "animateText"?: boolean;
         "onLoadEvent"?: (event: CustomEvent<any>) => void;
+        /**
+          * The percentage of the circle that should be filled, for example 75%
+         */
         "percentage"?: number;
     }
     interface YogaUiClickable {
@@ -274,10 +280,13 @@ declare namespace LocalJSX {
     interface YogaUiIcon {
         "color"?: string;
         "height"?: string;
-        "icon": string;
+        "icon": IconOption;
         "width"?: string;
     }
     interface YogaUiProgress {
+        /**
+          * The percentage of the circle that should be filled, for example 75%
+         */
         "percentage": string;
     }
     interface YogaUiRow {
@@ -298,7 +307,6 @@ declare namespace LocalJSX {
         "variant"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
         "yoga-ui-button": YogaUiButton;
         "yoga-ui-card": YogaUiCard;
         "yoga-ui-category": YogaUiCategory;
@@ -322,7 +330,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "yoga-ui-button": LocalJSX.YogaUiButton & JSXBase.HTMLAttributes<HTMLYogaUiButtonElement>;
             "yoga-ui-card": LocalJSX.YogaUiCard & JSXBase.HTMLAttributes<HTMLYogaUiCardElement>;
             "yoga-ui-category": LocalJSX.YogaUiCategory & JSXBase.HTMLAttributes<HTMLYogaUiCategoryElement>;

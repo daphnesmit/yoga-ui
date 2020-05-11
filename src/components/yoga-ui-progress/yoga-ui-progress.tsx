@@ -6,6 +6,9 @@ import { Component, h, Prop } from "@stencil/core";
   shadow: true
 })
 export class YogaUiProgress {
+  /**
+   * The percentage of the circle that should be filled, for example 75%
+   */
   @Prop() percentage!: string;
   render() {
     return (

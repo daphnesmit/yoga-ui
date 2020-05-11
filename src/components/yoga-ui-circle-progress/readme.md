@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property      | Attribute      | Description | Type      | Default |
-| ------------- | -------------- | ----------- | --------- | ------- |
-| `animateText` | `animate-text` |             | `boolean` | `false` |
-| `percentage`  | `percentage`   |             | `number`  | `0`     |
+| Property      | Attribute      | Description                                                                           | Type      | Default |
+| ------------- | -------------- | ------------------------------------------------------------------------------------- | --------- | ------- |
+| `animateText` | `animate-text` | If `true`, the text inside the circle will animate and count up. Defaults to `false`. | `boolean` | `false` |
+| `percentage`  | `percentage`   | The percentage of the circle that should be filled, for example 75%                   | `number`  | `0`     |
 
 
 ## Events

@@ -1,4 +1,5 @@
 import { Component, h, Prop } from "@stencil/core";
+import { IconOption } from "../yoga-ui-icon/yoga-ui-icon";
 
 @Component({
   tag: "yoga-ui-button",
@@ -7,9 +8,21 @@ import { Component, h, Prop } from "@stencil/core";
 })
 export class YogaUiButton {
   @Prop() variant = "primary";
+   /**
+   * If `true`, the button will be disabled. Defaults to `false`.
+   */
   @Prop() disabled: boolean;
-  @Prop() startIcon: string;
-  @Prop() endIcon: string;
+   /**
+   * Adds a svg icon in front 
+   */
+  @Prop() startIcon: IconOption;
+  /**
+  * Adds a svg icon at the end
+  */
+  @Prop() endIcon: IconOption;
+  /**
+  * Set the size if the icon
+  */
   @Prop() iconSize: string;
 
   getIconColor() {
