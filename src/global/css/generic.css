@@ -5,6 +5,10 @@ body {
   line-height: 1.8;
   min-width: 320px;
   background-color: var(--color-off-white);
+
+}
+body.modal--is-open {
+  overflow-y: hidden !important;
 }
 
 h1,

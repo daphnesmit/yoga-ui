@@ -57,6 +57,7 @@ h4,
 
 .heading--center-mobile {
   text-align: center;
+  
   @include breakpoint("md") {
     text-align: left;
   }

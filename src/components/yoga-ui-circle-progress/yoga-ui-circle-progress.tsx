@@ -15,7 +15,7 @@ import {
   shadow: true
 })
 export class YogaUiCircleProgress {
-  @Element() private el: HTMLElement;
+  @Element() private element: HTMLElement;
 
   /**
    * The percentage of the circle that should be filled, for example 75%
@@ -34,7 +34,7 @@ export class YogaUiCircleProgress {
 
   private setupVars() {
     const {
-      el: { shadowRoot }
+      element: { shadowRoot }
     } = this;
 
     this.circle = shadowRoot.querySelector("[js-hook-circle]");

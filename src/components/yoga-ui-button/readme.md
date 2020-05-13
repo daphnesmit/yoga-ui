@@ -20,6 +20,7 @@
 
 ### Used by
 
+ - [yoga-ui-confirm-modal](../yoga-ui-confirm-modal)
  - [yoga-ui-cta](../yoga-ui-cta)
 
 ### Depends on
@@ -30,6 +31,7 @@
 ```mermaid
 graph TD;
   yoga-ui-button --> yoga-ui-icon
+  yoga-ui-confirm-modal --> yoga-ui-button
   yoga-ui-cta --> yoga-ui-button
   style yoga-ui-button fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -74,6 +74,10 @@ export namespace Components {
          */
         "parsedCols": number[];
     }
+    interface YogaUiConfirmModal {
+        "close": () => Promise<void>;
+        "open": () => Promise<void>;
+    }
     interface YogaUiContainer {
     }
     interface YogaUiCta {
@@ -119,6 +123,11 @@ export namespace Components {
           * The icon width
          */
         "width": string;
+    }
+    interface YogaUiModal {
+        "close": () => Promise<void>;
+        "open": () => Promise<void>;
+        "show": boolean;
     }
     interface YogaUiProgress {
         /**
@@ -234,6 +243,12 @@ declare global {
         prototype: HTMLYogaUiColElement;
         new (): HTMLYogaUiColElement;
     };
+    interface HTMLYogaUiConfirmModalElement extends Components.YogaUiConfirmModal, HTMLStencilElement {
+    }
+    var HTMLYogaUiConfirmModalElement: {
+        prototype: HTMLYogaUiConfirmModalElement;
+        new (): HTMLYogaUiConfirmModalElement;
+    };
     interface HTMLYogaUiContainerElement extends Components.YogaUiContainer, HTMLStencilElement {
     }
     var HTMLYogaUiContainerElement: {
@@ -263,6 +278,12 @@ declare global {
     var HTMLYogaUiIconElement: {
         prototype: HTMLYogaUiIconElement;
         new (): HTMLYogaUiIconElement;
+    };
+    interface HTMLYogaUiModalElement extends Components.YogaUiModal, HTMLStencilElement {
+    }
+    var HTMLYogaUiModalElement: {
+        prototype: HTMLYogaUiModalElement;
+        new (): HTMLYogaUiModalElement;
     };
     interface HTMLYogaUiProgressElement extends Components.YogaUiProgress, HTMLStencilElement {
     }
@@ -302,11 +323,13 @@ declare global {
         "yoga-ui-circle-progress": HTMLYogaUiCircleProgressElement;
         "yoga-ui-clickable": HTMLYogaUiClickableElement;
         "yoga-ui-col": HTMLYogaUiColElement;
+        "yoga-ui-confirm-modal": HTMLYogaUiConfirmModalElement;
         "yoga-ui-container": HTMLYogaUiContainerElement;
         "yoga-ui-cta": HTMLYogaUiCtaElement;
         "yoga-ui-dots-handle": HTMLYogaUiDotsHandleElement;
         "yoga-ui-heading": HTMLYogaUiHeadingElement;
         "yoga-ui-icon": HTMLYogaUiIconElement;
+        "yoga-ui-modal": HTMLYogaUiModalElement;
         "yoga-ui-progress": HTMLYogaUiProgressElement;
         "yoga-ui-row": HTMLYogaUiRowElement;
         "yoga-ui-section": HTMLYogaUiSectionElement;
@@ -383,6 +406,8 @@ declare namespace LocalJSX {
          */
         "parsedCols"?: number[];
     }
+    interface YogaUiConfirmModal {
+    }
     interface YogaUiContainer {
     }
     interface YogaUiCta {
@@ -429,6 +454,11 @@ declare namespace LocalJSX {
           * The icon width
          */
         "width"?: string;
+    }
+    interface YogaUiModal {
+        "onModalClosed"?: (event: CustomEvent<any>) => void;
+        "onModalOpened"?: (event: CustomEvent<any>) => void;
+        "show"?: boolean;
     }
     interface YogaUiProgress {
         /**
@@ -508,11 +538,13 @@ declare namespace LocalJSX {
         "yoga-ui-circle-progress": YogaUiCircleProgress;
         "yoga-ui-clickable": YogaUiClickable;
         "yoga-ui-col": YogaUiCol;
+        "yoga-ui-confirm-modal": YogaUiConfirmModal;
         "yoga-ui-container": YogaUiContainer;
         "yoga-ui-cta": YogaUiCta;
         "yoga-ui-dots-handle": YogaUiDotsHandle;
         "yoga-ui-heading": YogaUiHeading;
         "yoga-ui-icon": YogaUiIcon;
+        "yoga-ui-modal": YogaUiModal;
         "yoga-ui-progress": YogaUiProgress;
         "yoga-ui-row": YogaUiRow;
         "yoga-ui-section": YogaUiSection;
@@ -531,11 +563,13 @@ declare module "@stencil/core" {
             "yoga-ui-circle-progress": LocalJSX.YogaUiCircleProgress & JSXBase.HTMLAttributes<HTMLYogaUiCircleProgressElement>;
             "yoga-ui-clickable": LocalJSX.YogaUiClickable & JSXBase.HTMLAttributes<HTMLYogaUiClickableElement>;
             "yoga-ui-col": LocalJSX.YogaUiCol & JSXBase.HTMLAttributes<HTMLYogaUiColElement>;
+            "yoga-ui-confirm-modal": LocalJSX.YogaUiConfirmModal & JSXBase.HTMLAttributes<HTMLYogaUiConfirmModalElement>;
             "yoga-ui-container": LocalJSX.YogaUiContainer & JSXBase.HTMLAttributes<HTMLYogaUiContainerElement>;
             "yoga-ui-cta": LocalJSX.YogaUiCta & JSXBase.HTMLAttributes<HTMLYogaUiCtaElement>;
             "yoga-ui-dots-handle": LocalJSX.YogaUiDotsHandle & JSXBase.HTMLAttributes<HTMLYogaUiDotsHandleElement>;
             "yoga-ui-heading": LocalJSX.YogaUiHeading & JSXBase.HTMLAttributes<HTMLYogaUiHeadingElement>;
             "yoga-ui-icon": LocalJSX.YogaUiIcon & JSXBase.HTMLAttributes<HTMLYogaUiIconElement>;
+            "yoga-ui-modal": LocalJSX.YogaUiModal & JSXBase.HTMLAttributes<HTMLYogaUiModalElement>;
             "yoga-ui-progress": LocalJSX.YogaUiProgress & JSXBase.HTMLAttributes<HTMLYogaUiProgressElement>;
             "yoga-ui-row": LocalJSX.YogaUiRow & JSXBase.HTMLAttributes<HTMLYogaUiRowElement>;
             "yoga-ui-section": LocalJSX.YogaUiSection & JSXBase.HTMLAttributes<HTMLYogaUiSectionElement>;
