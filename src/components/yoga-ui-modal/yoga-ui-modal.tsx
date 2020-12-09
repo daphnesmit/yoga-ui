@@ -29,7 +29,7 @@ export class YogaUiModal {
   @Method()
   async close() {
     document.body.classList.remove("modal--is-open");
-    this.element.classList.remove("modal--is-showing");
+    this.element.querySelector('.modal').classList.remove("modal--is-showing");
 
     this.modalClosed.emit("closed");
   }
@@ -37,7 +37,7 @@ export class YogaUiModal {
   @Method()
   async open() {
     document.body.classList.add("modal--is-open");
-    this.element.classList.add("modal--is-showing");
+    this.element.querySelector('.modal').classList.add("modal--is-showing");
 
     this.modalOpened.emit();
   }
