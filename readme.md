@@ -21,6 +21,7 @@ Yoga UI is a UI component library that contains the following Web Components:
 | Card      | yoga-ui-card        | 
 | Cta       | yoga-ui-cta         | 
 | Spacer    | yoga-ui-spacer      | 
+| Modal     | yoga-ui-modal      | 
 | Circle Progress    | yoga-ui-circle-progress      | 
 | Progress           | yoga-ui-progress             | 
 | [WIP] Lazy loading |         | 
